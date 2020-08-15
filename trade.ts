@@ -23,12 +23,6 @@ const influx = new InfluxDB({
   schema: [schema],
 });
 
-influx.getDatabaseNames()
-  .then(names => {
-    if (!names.includes('pairs')) {
-      return influx.createDatabase('pairs');
-    }
-  })
 
 let alertRecievers = config.get("alertRecievers");
 let accountSid = config.get("twilio").accountSid;

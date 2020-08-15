@@ -23,7 +23,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "InfluxDB-1",
+      "datasource": null,
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -141,7 +141,7 @@
       }
     },
     {
-      "datasource": "InfluxDB-1",
+      "datasource": null,
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -228,7 +228,7 @@
       "type": "stat"
     },
     {
-      "datasource": "InfluxDB-1",
+      "datasource": null,
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -322,7 +322,7 @@
       "type": "stat"
     },
     {
-      "datasource": "InfluxDB-1",
+      "datasource": null,
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -444,5 +444,5 @@
   "timezone": "",
   "title": "dia/weth",
   "uid": "OSPSaXSMz",
-  "version": 7
+  "version": 1
 }
