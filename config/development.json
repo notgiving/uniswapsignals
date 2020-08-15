@@ -1,0 +1,9 @@
+{
+    "env": "development",
+    "twilio":{
+        "accountSid":"",
+        "authToken":"",
+        "isEnable":true
+      },
+      "alertRecievers":[""]
+}
