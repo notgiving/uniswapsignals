@@ -73,7 +73,7 @@ let main = async () => {
 
       let pairinstring = PAIR_TO_KEEP_EYE[0] + "/" + PAIR_TO_KEEP_EYE[1];
       eventService.write({type:"price",pair:pairinstring,price:p.toSignificant(6)})
-      if (p.greaterThan("130")) {
+      if (p.greaterThan("175")) {
         let message =
           "Dia Price is " +
           p.toSignificant(6) +
@@ -81,7 +81,7 @@ let main = async () => {
           tradedia.executionPrice.invert().toSignificant(6);
           messageService.sendToMultiple(message, alertRecievers);
       }
-      if (p.lessThan("160")) {
+      if (p.lessThan("161")) {
         let message =
           "Dia Price is " +
           p.toSignificant(6) +
