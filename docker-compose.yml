@@ -1,0 +1,12 @@
+version: '3'
+    
+services:
+  timeseries:
+    image: influxdb
+    ports:
+        - "8086:8086"
+  dashboard:
+    image: grafana/grafana
+    ports:
+        - "3000:3000"
+
