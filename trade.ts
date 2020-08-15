@@ -72,6 +72,9 @@ let main = async () => {
       let p = pair.priceOf(token1);
 
       let pairinstring = PAIR_TO_KEEP_EYE[0] + "/" + PAIR_TO_KEEP_EYE[1];
+
+      console.log("Fetched Price",p.toSignificant(6))
+
       eventService.write({type:"price",pair:pairinstring,price:p.toSignificant(6)})
       if (p.greaterThan("175")) {
         let message =
