@@ -16,6 +16,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": 1,
+  "iteration": 1597838898912,
   "links": [],
   "panels": [
     {
@@ -75,7 +76,7 @@
           "orderByTime": "ASC",
           "policy": "autogen",
           "query": "SELECT last(\"price\") FROM \"autogen\".\"price\" WHERE (\"pair\" = 'DIA/WETH') AND $timeFilter",
-          "rawQuery": true,
+          "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
           "select": [
@@ -95,8 +96,8 @@
           "tags": [
             {
               "key": "pair",
-              "operator": "=",
-              "value": "DIA/WETH"
+              "operator": "=~",
+              "value": "/^$Pairs$/"
             }
           ],
           "tz": ""
@@ -104,7 +105,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "last Price DIA/WETH",
+      "title": "last Price Per WETH",
       "type": "stat"
     },
     {
@@ -244,8 +245,8 @@
           "tags": [
             {
               "key": "pair",
-              "operator": "=",
-              "value": "DIA/WETH"
+              "operator": "=~",
+              "value": "/^$Pairs$/"
             }
           ]
         }
@@ -262,7 +263,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "DIA/WETH",
+      "title": "",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -374,8 +375,8 @@
           "tags": [
             {
               "key": "pair",
-              "operator": "=",
-              "value": "DIA/WETH"
+              "operator": "=~",
+              "value": "/^$Pairs$/"
             }
           ],
           "tz": ""
@@ -461,8 +462,8 @@
           "tags": [
             {
               "key": "pair",
-              "operator": "=",
-              "value": "DIA/WETH"
+              "operator": "=~",
+              "value": "/^$Pairs$/"
             }
           ],
           "tz": ""
@@ -541,7 +542,34 @@
   "style": "dark",
   "tags": [],
   "templating": {
-    "list": []
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "text": "DIA/WETH",
+          "value": "DIA/WETH"
+        },
+        "datasource": "InfluxDB",
+        "definition": "SHOW TAG VALUES  WITH KEY = \"pair\"",
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "Pairs",
+        "options": [],
+        "query": "SHOW TAG VALUES  WITH KEY = \"pair\"",
+        "refresh": 1,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
   },
   "time": {
     "from": "now-15m",
@@ -564,5 +592,5 @@
   "timezone": "",
   "title": "dia/weth",
   "uid": "OSPSaXSMz",
-  "version": 15
+  "version": 21
 }
