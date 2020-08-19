@@ -5,7 +5,7 @@ export interface Events {
   pair: string;
   price: any;
 }
-interface IEvents {
+export interface IEvents {
   write(event: Events): void;
 }
 

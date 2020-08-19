@@ -1,6 +1,6 @@
 import * as twilio from "twilio";
 
-interface IMessage {
+export interface IMessage {
   send(message: string, to: string): void;
   sendToMultiple(message: string, to: string[]): void;
 }
