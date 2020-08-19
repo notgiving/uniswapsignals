@@ -32,25 +32,24 @@ export class UniSwapPairTracker  {
           this.chain,
           tokens[this.chain][this.pair[1]]
         );
-        let pair = await Fetcher.fetchPairData(token0, token1);
 
         while (true) {
             try {
+                let pair = await Fetcher.fetchPairData(token0, token1);
+
               const TOKEN0_TOKEN1_ROUTE = new Route([pair], token0, token1);
               // Sample Trade of 270 Tokens
               let tradedia = Trade.exactIn(
                 TOKEN0_TOKEN1_ROUTE,
                 new TokenAmount(token0, "270000000000000000000")
               );
-              console.log("Trade", tradedia.executionPrice.invert().toSignificant(6));
+            //   console.log("Trade", tradedia.executionPrice.invert().toSignificant(6));
         
-              console.log("fetching Price ", this.pair[1]);
               let p = pair.priceOf(token1);
         
               let pairinstring = this.pair[0] + "/" + this.pair[1];
-        
-              console.log("Fetched Price",p.toSignificant(6))
-        
+              console.log("fetching Price  of Pair", pairinstring);
+
               this.eventservice.write({type:"price",pair:pairinstring,price:p.toSignificant(6)})
             //   if (p.greaterThan("175")) {
             //     let message =

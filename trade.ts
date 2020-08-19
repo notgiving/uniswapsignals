@@ -31,7 +31,7 @@ const INFLUXDB_ADMIN_PASSWORD = config.get("influxdb").password
 
 let authToken = config.get("twilio").authToken;
 let chain = ChainId.MAINNET;
-let pairs = [["DIA", "WETH"],["CRV","WETH"]];
+let pairs = [["CRV","WETH"],["DIA", "WETH"]];
 
 let messageService = new TwilioWhastAppMessage(accountSid, authToken);
 
@@ -48,9 +48,14 @@ let eventService = new InfluxDBRepository({
 let main = async () => {
   // Init message Service
 
-  pairs.forEach(element => {
+  for (let index = 0; index < pairs.length; index++) {
+    const element = pairs[index];
+
     new UniSwapPairTracker(messageService,eventService,element,chain).start()
-  });
+    
+  }
+
+ 
 
  
 };
