@@ -12,5 +12,7 @@ tokens[ChainId.MAINNET] = {
   FSW:"0xfffffffFf15AbF397dA76f1dcc1A1604F45126DB",
   OXT:"0x4575f41308ec1483f3d399aa9a2826d74da13deb",
   WBTC:"0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
+  HAKKA:"0x0e29e5abbb5fd88e28b2d355774e73bd47de3bcd",
+  OM:"0x2baecdf43734f22fd5c152db08e3c27233f0c7d2",
 
 };
