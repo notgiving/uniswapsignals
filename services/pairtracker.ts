@@ -50,7 +50,7 @@ export class UniSwapPairTracker  {
               let pairinstring = this.pair[0] + "/" + this.pair[1];
               console.log("fetching Price  of Pair", pairinstring);
 
-              this.eventservice.write({type:"price",pair:pairinstring,price:p.toSignificant(6)})
+              this.eventservice.write({type:"price",pair:pairinstring,price:p.toSignificant(8)})
             //   if (p.greaterThan("175")) {
             //     let message =
             //       "Dia Price is " +
