@@ -31,7 +31,7 @@ const INFLUXDB_ADMIN_PASSWORD = config.get("influxdb").password
 
 let authToken = config.get("twilio").authToken;
 let chain = ChainId.MAINNET;
-let pairs = [["CRV","WETH"],["DIA", "WETH"],["LINK","WETH"],["DAI","WETH"],["LEND","WETH"],["SUSHI","WETH"],["FSW","WETH"],["OXT","WETH"],["WBTC","WETH"],["HAKKA","WETH"],["OM","WETH"]];
+let pairs = [["CRV","WETH"],["DIA", "WETH"],["LINK","WETH"],["DAI","WETH"],["LEND","WETH"],["SUSHI","WETH"],["FSW","WETH"],["OXT","WETH"],["WBTC","WETH"],["HAKKA","WETH"],["OM","WETH"],["FACT","WETH"]];
 
 let messageService = new TwilioWhastAppMessage(accountSid, authToken);
 

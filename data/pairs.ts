@@ -14,5 +14,6 @@ tokens[ChainId.MAINNET] = {
   WBTC:"0x2260fac5e5542a773aa44fbcfedf7c193bc2c599",
   HAKKA:"0x0e29e5abbb5fd88e28b2d355774e73bd47de3bcd",
   OM:"0x2baecdf43734f22fd5c152db08e3c27233f0c7d2",
+  FACT:"0x23aeff664c1b2bba98422a0399586e96cc8a1c92",
 
 };
