@@ -19,31 +19,44 @@ let schema = {
   tags: ["pair"],
 };
 
-
-
 let alertRecievers = config.get("alertRecievers");
 let accountSid = config.get("twilio").accountSid;
-const INFLUXDB_HOST = config.get("influxdb").host
-const INFLUXDB_PORT = config.get("influxdb").port
-const INFLUXDB_ADMIN_USER= config.get("influxdb").user
-const INFLUXDB_ADMIN_PASSWORD = config.get("influxdb").password
-
+const INFLUXDB_HOST = config.get("influxdb").host;
+const INFLUXDB_PORT = config.get("influxdb").port;
+const INFLUXDB_ADMIN_USER = config.get("influxdb").user;
+const INFLUXDB_ADMIN_PASSWORD = config.get("influxdb").password;
 
 let authToken = config.get("twilio").authToken;
 let chain = ChainId.MAINNET;
-let pairs = [["CRV","WETH"],["DIA", "WETH"],["LINK","WETH"],["DAI","WETH"],["LEND","WETH"],["SUSHI","WETH"],["FSW","WETH"],["OXT","WETH"],["WBTC","WETH"],["HAKKA","WETH"],["OM","WETH"],["FACT","WETH"]];
+let pairs = [
+  ["CRV", "WETH"],
+  ["DIA", "WETH"],
+  ["LINK", "WETH"],
+  ["DAI", "WETH"],
+  ["LEND", "WETH"],
+  ["SUSHI", "WETH"],
+  ["FSW", "WETH"],
+  ["OXT", "WETH"],
+  ["WBTC", "WETH"],
+  ["HAKKA", "WETH"],
+  ["OM", "WETH"],
+  ["FACT", "WETH"],
+  ["SNX", "WETH"],
+  ["LID", "WETH"],
+  ["MITX", "WETH"],
+  ["LOCK", "WETH"],
+  ["OM", "WETH"],
+
+];
 
 let messageService = new TwilioWhastAppMessage(accountSid, authToken);
-
 
 let eventService = new InfluxDBRepository({
   username: INFLUXDB_ADMIN_USER,
   password: INFLUXDB_ADMIN_PASSWORD,
   database: "pairs",
-  schema: [schema]
+  schema: [schema],
 });
-
-
 
 let main = async () => {
   // Init message Service
@@ -51,15 +64,13 @@ let main = async () => {
   for (let index = 0; index < pairs.length; index++) {
     const element = pairs[index];
 
-    new UniSwapPairTracker(messageService,eventService,element,chain).start()
-    
+    new UniSwapPairTracker(
+      messageService,
+      eventService,
+      element,
+      chain
+    ).start();
   }
-
- 
-
- 
 };
-
-
 
 main();
