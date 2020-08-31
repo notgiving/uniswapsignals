@@ -22,4 +22,5 @@ tokens[ChainId.MAINNET] = {
   MTA:"0xa3bed4e1c75d00fa6f4e5e6922db7261b5e9acd2",
   BZRZ:"0x56d811088235f11c8920698a204a5010a788f4b3",
   DISTX:"0x4b4701f3f827e1331fb22ff8e2beac24b17eb055",
+  RUBY:"0xd94cfa225f71acf73bbec4a08db58ba77558d8e7",
 };

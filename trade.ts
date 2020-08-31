@@ -46,7 +46,9 @@ let pairs = [
   ["MITX", "WETH"],
   ["LOCK", "WETH"],
   ["OM", "WETH"],
-  ["DISTX","WETH"]
+  ["DISTX","WETH"],
+  ["RUBY","WETH"],
+  ["BZRZ","WETH"],
 
 ];
 

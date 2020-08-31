@@ -50,7 +50,7 @@ let generateList = async () => {
   return {
     name: "TwentyFourBytes",
     timestamp: new Date(),
-    version: { major: 1, minor: 1, patch: 1 },
+    version: { major: 1, minor: 1, patch: 2 },
     tokens: tokens,
   };
 };
