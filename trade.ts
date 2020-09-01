@@ -49,6 +49,9 @@ let pairs = [
   ["DISTX","WETH"],
   ["RUBY","WETH"],
   ["BZRZ","WETH"],
+  ["rPepe","WETH"],
+  ["XTAKE","WETH"],
+
 
 ];
 
