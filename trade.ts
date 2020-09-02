@@ -51,6 +51,7 @@ let pairs = [
   ["BZRZ","WETH"],
   ["rPepe","WETH"],
   ["XTAKE","WETH"],
+  ["KIMCHI","WETH"],
 
 
 ];
