@@ -47,6 +47,7 @@ let pairs = [
   ["LOCK", "WETH"],
   ["OM", "WETH"],
   ["CHI", "WETH"],
+  ["UNI", "WETh"],
 ];
 
 let messageService = new TwilioWhastAppMessage(accountSid, authToken);
