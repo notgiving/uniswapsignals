@@ -64,7 +64,7 @@ let main = async () => {
 
   for (let index = 0; index < pairs.length; index++) {
     const element = pairs[index];
-
+    console.log("--------------------", element);
     new UniSwapPairTracker(
       messageService,
       eventService,
