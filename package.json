@@ -18,6 +18,7 @@
     "@types/twilio": "^2.11.0",
     "@uniswap/sdk": "^3.0.3-beta.1",
     "convict": "^6.0.0",
+    "ethers": "^5.0.14",
     "influx": "^5.6.3",
     "telegraf": "^3.38.0",
     "twilio": "^3.48.2"
