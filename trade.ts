@@ -30,6 +30,7 @@ let authToken = config.get("twilio").authToken;
 let chain = ChainId.MAINNET;
 let pairs = [
   ["CRV", "WETH"],
+  ["UNI", "WETH"],
   ["DIA", "WETH"],
   ["LINK", "WETH"],
   ["DAI", "WETH"],
@@ -47,7 +48,6 @@ let pairs = [
   // ["LOCK", "WETH"],
   // ["OM", "WETH"],
   ["CHI", "WETH"],
-  ["UNI", "WETh"],
 ];
 
 let messageService = new TwilioWhastAppMessage(accountSid, authToken);
